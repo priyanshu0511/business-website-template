@@ -1,13 +1,590 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: black;
+   }
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 25px 5px;
+}
+
+.navlinks ul li{
+    list-style-type: none;
+}
+
+.navlinks ul li a p{
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+
+.navlinks ul li a p:hover{
+    opacity: 1;
+}
+
+.navlinks ul{
+    display: flex;
+    gap: 35px;
+}
+
+.logo{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contact{
+    padding: 17px 40px;
+    background-color: black;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.contact:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.heading{
+    background-color: black;
+    color: white;
+    height: 620px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.heading h1{
+    font-size: 75px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.heading h2{
+    font-weight: normal;
+}
+
+.learn{
+    font-size: 20px;
+    padding: 15px 40px;
+    font-weight: lighter;
+}
+
+.whatwebel{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+    border-bottom: 1px rgba(0,0,0,0.1) solid;
+    
+    margin-top: 100px;
+}
+
+.whatwe{
+    opacity: 0.5;
+    margin: -20px;
+    font-size: 15px;
+}
+
+.grow{
+    font-size: 35px;
+    width: 85%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.abouthome{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.abouthomeimage{
+    background-color: black;
+    width: 2900px;
+    height: 450px;
+}
+
+.abouthead{
+    opacity: 0.5;
+}
+
+.aboutwhowe{
+    font-size: 35px;
+}
+
+.aboutpara{
+    padding-right: 50px;
+    height:100px;
+    margin-bottom: 100px;
+    font-size: 15px;
+    line-height: 180%;
+    color: rgba(0,0,0,0.7);
+}
+
+.teamhome{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.teamhomeimage{
+    background-color: black;
+    width: 800px;
+    height: 225px;
+}
+
+.teamhead{
+    opacity: 0.5;
+}
+
+.teamwhowe{
+    font-size: 35px;
+}
+
+.teampara{
+    padding-right: 50px;
+    height:100px;
+    margin-bottom: 50px;
+    font-size: 15px;
+    line-height: 180%;
+    color: rgba(0,0,0,0.7);
+}
+
+.aboutus{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.aboutusss{
+    font-size: 12.5px;
+    color: rgba(0,0,0,0.7);
+}
+
+.companynews{
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.blogs{
+    display: flex;
+}
+
+.blog{
+    padding: 2px 10px;
+}
+
+.blogheading{
+    font-size: 25px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.blogheading:hover{
+    opacity: 0.5;
+}
+
+.blogdate{
+    color: rgba(0,0,0,0.5);
+}
+
+.blogcontent{
+    color: rgba(0,0,0,0.5);
+    line-height: 170%;
+}
+
+.footer{
+    background-color: rgba(0,0,0,0.05);
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
+    margin-top: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footertext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 65%;
+    text-align: center;
+    gap: 1px;
+}
+
+.footerheading{
+    font-size: 40px;
+}
+
+.footerpara{
+    font-size: 20px;
+    color: rgba(0,0,0,0.5);
+    margin-top: -20px;
+}
+
+.footerbutton{
+    padding: 17px 40px;
+    background-color: black;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.footerbutton:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.titleabout{
+    background-color: black;
+    color: white;
+    width: 95%;
+    margin: 0 auto;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abouts{
+    font-size: 60px;
+}
+
+.aboutinfotitle{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 150px;
+
+}
+
+.aboutinfotitle p{
+    text-align: center;
+    font-size: 35px;
+    padding: 0 60px;
+    padding-bottom: 125px;
+    border-bottom: 1px rgba(0,0,0,0.15) solid;
+}
+
+.aboutinfopara{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    color: rgba(0,0,0,0.5);
+    line-height: 170%;
+    padding-bottom: 125px;
+    border-bottom: 1px rgba(0,0,0,0.15) solid;
+    margin-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.whatwebest{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    width: 85%;
+    margin-bottom: -80px;
+}
+
+.whatbestat{
+    color: rgba(0,0,0,0.5);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ourservices{
+    font-size: 35px;
+    margin-top: -1px;
+}
+
+.serviceimg{
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.servicegrid{
+    padding: 0 20px;
+    margin-bottom: 80px;
+}
+
+.servicehead{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.servicetext{
+    color: rgba(0,0,0,0.5);
+    line-height: 175%;
+}
+
+.projectimg{
+    background-color: black;
+    height: 450px;
+    width: 1100px;
+    transition: 0.2s ease-in-out;
+}
+
+.projectimg:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.projectgrid{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.projecttitle{
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.projectname{
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.5)
+}
+
+.peopleimg{
+    width: 325px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.05);
+    margin: 0 10px;
+}
+
+.teamgrid{
+    padding: 0 20px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.peoplehead{
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.peopletext{
+    color: rgba(0,0,0,0.5);
+    line-height: 175%;
+    margin-top: 10px;
+}
+
+.blogimg{
+    background-color: black;
+    height: 600px;
+    width: 100%;
+}
+
+.blogtext{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.blogtitle{
+    font-size: 30px;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+
+.blogtitle:hover{
+    cursor: pointer;
+    color: rgba(0,0,0,0.7);
+}
+
+.blogconten{
+    color: rgba(0,0,0,0.5);
+    margin-top: 20px;
+    line-height: 170%;
+}
+
+.blogdates{
+    color: rgba(0,0,0,0.7);
+    font-size: 12.5px;
+    margin-top: 20px;
+    margin-bottom: 65px;
+}
+
+.contactcontent{
+    width: 85%;
+    margin: 70px auto;
+}
+
+.contactusleft{
+    width: 65%;
+    border: 0.5px rgba(0,0,0,0.25) solid;
+    padding: 20px 40px;
+}
+
+.contactushead{
+    font-size: 40px;
+}
+
+.contactustext{
+    margin-top: -10px;
+    line-height: 170%;
+    color: rgba(0,0,0,0.5);
+}
+
+.contactform{
+    margin-top: 40px;
+}
+
+.contactinfo{
+    font-size: 12.5px;
+}
+
+.contactusleft input{
+    width: 100%;
+    border: 0.5px solid rgba(0,0,0,0.25);
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+input::placeholder{
+    color: rgba(0,0,0,0.25);
+}
+
+input:active{
+    border: none;
+    outline: none;
+}
+
+.contactusleft input:active{
+    border: 0.5px solid black;
+}
+
+.contactusleft input:focus{
+    outline: none;
+    border-color: black;
+}
+
+.contactinput{
+    height: 50px;
+}
+
+.contactinputmessage{
+    height: 200px;
+    resize: none;
+    width: 100%;
+    border: 0.5px solid rgba(0,0,0,0.25);
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+textarea::placeholder{
+    font-family: 'Monteserrat', sans-serif;
+    color: rgba(0,0,0,0.25);
+}
+
+textarea:active{
+    outline: none;
+    border-color: black;
+}
+
+textarea:focus{
+    outline: none;
+    border-color: black;
+}
+
+.submitform{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 50px;
+    margin-top: 30px;
+    transition: 0.3s ease;
+}
+
+.submitform:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.contactcontent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.outaddressright{
+    width: 25%;
+}
+
+.addresstext{
+    font-size: 13px;
+}
+
+.addresstextpara{
+    font-size: 15.5px;
+    color: rgba(0,0,0,0.5);
+    line-height: 170%;
+    margin-bottom: 20px;
+}
+
+.thanksforsub{
+    background-color: rgb(4, 153, 4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.navlinks:active{
+    color: black;
 }
